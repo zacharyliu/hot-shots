@@ -1,3 +1,5 @@
+/// <reference types="node" />
+
 import dgram = require("dgram");
 
 declare module "hot-shots" {
@@ -20,6 +22,7 @@ declare module "hot-shots" {
     protocol?: 'tcp' | 'udp' | 'uds' | 'stream';
     sampleRate?: number;
     socket?: dgram.Socket;
+    stream?: NodeJS.WriteStream;
     suffix?: string;
     telegraf?: boolean;
     useDefaultRoute?: boolean;
